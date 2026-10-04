@@ -35,7 +35,7 @@
 
 			button.addEventListener('click', async () => {
 				// Copies "3.1415..." without the "pi = " label or the spaces.
-				const digits = document.getElementById('pi').replace(/\s+/g, '');
+				const digits = document.getElementById('pi').textContent.replace(/\s+/g, '');
 
 				try {
 					await navigator.clipboard.writeText(digits);
